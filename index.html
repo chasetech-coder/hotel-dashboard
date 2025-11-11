@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chasetech Luxury Hotel - Experience unparalleled elegance and comfort in the heart of the city. Premium accommodations, fine dining, and exceptional amenities await.">
+  <meta name="keywords" content="luxury hotel, premium accommodation, fine dining, spa resort, business travel, vacation getaway">
+  <meta name="author" content="Chasetech">
+  <meta property="og:title" content="Chasetech Luxury Hotel">
+  <meta property="og:description" content="Experience unparalleled elegance and comfort in the heart of the city">
+  <meta property="og:image" content="https://placehold.co/1200x630/1e3a8a/ffffff?text=Chasetech+Luxury+Hotel">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Chasetech Luxury Hotel | Premium Accommodations & Experiences</title>
+  
+  <!-- Preconnect to CDNs -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap" as="style">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 fill=%22%231e3a8a%22>🏨</text></svg>">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "name": "Chasetech Luxury Hotel",
+    "description": "A premier luxury hotel experience in the heart of the city with premium accommodations, fine dining, and exceptional amenities.",
+    "url": "https://chasebizx.github.io/chasetech-hotel",
+    "telephone": "+254790124604",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Elegance Boulevard",
+      "addressLocality": "Nairobi",
+      "addressRegion": "Nairobi County",
+      "postalCode": "00100",
+      "addressCountry": "KE"
+    },
+    "starRating": {
+      "@type": "Rating",
+      "ratingValue": "5"
+    },
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Spa",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Pool",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Restaurant",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Free WiFi",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Parking",
+        "value": true
+      }
+    ],
+    "image": "https://placehold.co/1200x630/1e3a8a/ffffff?text=Chasetech+Luxury+Hotel"
+  }
+  </script>
+  
+  <script>
+    // Initialize Tailwind config
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+            },
+            gold: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              200: '#fde68a',
+              300: '#fcd34d',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              800: '#92400e',
+              900: '#78350f',
+            },
+            neutral: {
+              950: '#0d1d2d',
+            }
+          },
+          fontFamily: {
+            heading: ['Playfair Display', 'serif'],
+            body: ['Raleway', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    :root {
+      --primary-500: #0ea5e9;
+      --gold-500: #f59e0b;
+      --neutral-950: #0d1d2d;
+    }
+    
+    .scrollbar-thin::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    .scrollbar-thin::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    
+    .scrollbar-thin::-webkit-scrollbar-thumb {
+      background-color: rgba(156, 163, 175, 0.5);
+      border-radius: 3px;
+    }
+    
+    .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(107, 114, 128, 0.7);
+    }
+    
+    .page {
+      min-height: 100vh;
+      padding-top: 5rem;
+    }
+    
+    .page:not(.active) {
+      display: none;
+    }
+    
+    .room-card:hover .room-image {
+      transform: scale(1.05);
+    }
+    
+    .amenity-icon {
+      transition: transform 0.3s ease;
+    }
+    
+    .amenity-card:hover .amenity-icon {
+      transform: scale(1.15);
+    }
+    
+    .gallery-item:hover {
+      transform: scale(1.03);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body class="font-body bg-neutral-50 text-neutral-800 dark:bg-neutral-950 dark:text-neutral-200 transition-colors duration-300">
+  <!-- Google Analytics (placeholder) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX'); // Replace with your GA4 ID
+  </script>
+  
+  <!-- Skip to main content link -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:bg-primary-500 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg z-50">
+    Skip to main content
+  </a>
+  
+  <!-- Header & Navigation -->
+  <header class="fixed w-full top-0 z-50 bg-white/80 dark:bg-neutral-950/80 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo -->
+        <a href="#home" class="flex items-center space-x-3 focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg" aria-label="Chasetech Luxury Hotel homepage">
+          <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-gold-500 rounded-full flex items-center justify-center">
+            <span class="text-white font-bold text-lg">C</span>
+          </div>
+          <span class="text-xl font-heading font-bold text-neutral-900 dark:text-white">Chasetech</span>
+        </a>
+        
+        <!-- Navigation Links -->
+        <nav class="hidden md:block" aria-label="Main navigation">
+          <ul class="flex space-x-8">
+            <li><a href="#home" class="font-medium text-neutral-700 dark:text-neutral-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors relative group py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 after:transition-all after:duration-300 group-hover:after:w-full">Home</a></li>
+            <li><a href="#rooms" class="font-medium text-neutral-700 dark:text-neutral-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors relative group py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 after:transition-all after:duration-300 group-hover:after:w-full">Rooms</a></li>
+            <li><a href="#amenities" class="font-medium text-neutral-700 dark:text-neutral-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors relative group py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 after:transition-all after:duration-300 group-hover:after:w-full">Amenities</a></li>
+            <li><a href="#dining" class="font-medium text-neutral-700 dark:text-neutral-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors relative group py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 after:transition-all after:duration-300 group-hover:after:w-full">Dining</a></li>
+            <li><a href="#gallery" class="font-medium text-neutral-700 dark:text-neutral-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors relative group py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 after:transition-all after:duration-300 group-hover:after:w-full">Gallery</a></li>
+            <li><a href="#contact" class="font-medium text-neutral-700 dark:text-neutral-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors relative group py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary-500 after:transition-all after:duration-300 group-hover:after:w-full">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <!-- Right side actions -->
+        <div class="flex items-center space-x-4">
+          <!-- Theme Toggle -->
+          <button id="theme-toggle" aria-label="Toggle dark mode" class="p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
+            <i class="fa-solid fa-moon text-neutral-700 dark:text-neutral-300 text-lg"></i>
+          </button>
+          
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
+            <i class="fa-solid fa-bars text-neutral-700 dark:text-neutral-300 text-xl"></i>
+          </button>
+          
+          <!-- Booking Button -->
+          <a href="#contact" class="hidden md:block bg-primary-500 hover:bg-primary-600 text-white font-medium py-2 px-6 rounded-full transition-colors duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2">
+            <span class="flex items-center">
+              <i class="fa-solid fa-calendar-check mr-2"></i> Book Now
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-neutral-900 border-t border-neutral-200 dark:border-neutral-800">
+      <div class="px-4 pt-4 pb-6 space-y-4">
+        <a href="#home" class="block py-3 text-neutral-700 dark:text-neutral-300 font-medium hover:text-primary-500 dark:hover:text-primary-400 border-b border-neutral-100 dark:border-neutral-800">Home</a>
+        <a href="#rooms" class="block py-3 text-neutral-700 dark:text-neutral-300 font-medium hover:text-primary-500 dark:hover:text-primary-400 border-b border-neutral-100 dark:border-neutral-800">Rooms & Suites</a>
+        <a href="#amenities" class="block py-3 text-neutral-700 dark:text-neutral-300 font-medium hover:text-primary-500 dark:hover:text-primary-400 border-b border-neutral-100 dark:border-neutral-800">Amenities</a>
+        <a href="#dining" class="block py-3 text-neutral-700 dark:text-neutral-300 font-medium hover:text-primary-500 dark:hover:text-primary-400 border-b border-neutral-100 dark:border-neutral-800">Dining</a>
+        <a href="#gallery" class="block py-3 text-neutral-700 dark:text-neutral-300 font-medium hover:text-primary-500 dark:hover:text-primary-400 border-b border-neutral-100 dark:border-neutral-800">Gallery</a>
+        <a href="#contact" class="block py-3 text-neutral-700 dark:text-neutral-300 font-medium hover:text-primary-500 dark:hover:text-primary-400 border-b border-neutral-100 dark:border-neutral-800">Location & Contact</a>
+        <a href="#contact" class="block w-full mt-2 bg-primary-500 hover:bg-primary-600 text-white font-medium text-center py-3 rounded-lg transition-colors duration-300">Book Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Home Page -->
+    <section id="home" class="page active">
+      <!-- Hero Section -->
+      <div class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+          <img src="https://placehold.co/1920x1080/0c4a6e/ffffff?text=Luxury+Hotel" alt="Luxury hotel lobby with grand chandelier and elegant furnishings" class="w-full h-full object-cover brightness-75 contrast-125" loading="eager">
+        </div>
+        
+        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/70 to-transparent z-10"></div>
+        
+        <div class="relative z-20 text-center px-4 max-w-4xl mx-auto text-white">
+          <h1 class="text-4xl md:text-6xl font-heading font-bold mb-6">
+            Experience Unparalleled <span class="text-gold-400">Luxury</span>
+          </h1>
+          <p class="text-xl md:text-2xl mb-8 opacity-90">
+            Discover refined elegance and exceptional service in the heart of the city
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#contact" class="bg-gold-500 hover:bg-gold-600 text-neutral-900 font-bold py-4 px-8 rounded-full text-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
+              <span class="flex items-center justify-center">
+                <i class="fa-solid fa-calendar-check mr-2"></i> Reserve Your Stay
+              </span>
+            </a>
+            <a href="#gallery" class="bg-transparent border-2 border-white hover:bg-white hover:text-neutral-900 font-bold py-4 px-8 rounded-full text-lg transition-colors duration-300">
+              <span class="flex items-center justify-center">
+                <i class="fa-solid fa-camera mr-2"></i> Explore Gallery
+              </span>
+            </a>
+          </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <a href="#rooms" class="text-white text-2xl" aria-label="Scroll down to rooms section">
+            <i class="fa-solid fa-chevron-down"></i>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Intro Section -->
+      <div class="py-20 bg-white dark:bg-neutral-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-6">
+              <h2 class="text-3xl md:text-4xl font-heading font-bold text-neutral-900 dark:text-white">Welcome to Chasetech</h2>
+              <p class="text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                Nestled in the heart of Nairobi, Chasetech Luxury Hotel offers an oasis of sophistication and comfort for the discerning traveler. Our award-winning service, meticulously designed accommodations, and exceptional amenities create an unforgettable experience.
+              </p>
+              <p class="text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                Whether you're visiting for business or leisure, our dedicated team anticipates your every need to ensure a seamless stay. From the moment you arrive until your departure, we are committed to exceeding your expectations.
+              </p>
+              <div class="flex flex-wrap gap-4">
+                <a href="#rooms" class="inline-flex items-center bg-primary-500 hover:bg-primary-600 text-white font-medium py-3 px-6 rounded-lg transition-colors">
+                  Explore Rooms <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+                <a href="#amenities" class="inline-flex items-center border-2 border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-800 font-medium py-3 px-6 rounded-lg transition-colors">
+                  View Amenities <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="rounded-xl overflow-hidden shadow-lg">
+                <img src="https://placehold.co/600x400/0c4a6e/ffffff?text=Hotel+Exterior" alt="Elegant hotel exterior with grand entrance" class="w-full h-64 object-cover">
+              </div>
+              <div class="rounded-xl overflow-hidden shadow-lg mt-8">
+                <img src="https://placehold.co/600x400/0c4a6e/ffffff?text=Lobby" alt="Luxurious hotel lobby with crystal chandeliers" class="w-full h-64 object-cover">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Testimonials -->
+      <div class="py-20 bg-neutral-50 dark:bg-neutral-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4 text-neutral-900 dark:text-white">Guest Experiences</h2>
+            <p class="text-lg text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto">
+              Don't just take our word for it – hear what our distinguished guests have to say about their stay at Chasetech
+            </p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white dark:bg-neutral-800 rounded-2xl p-8 shadow-md border border-neutral-200 dark:border-neutral-700">
+              <div class="flex text-gold-400 mb-4">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-neutral-600 dark:text-neutral-300 italic mb-6">
+                "From the moment we arrived, the service was impeccable. The attention to detail in our suite was remarkable, and the concierge arranged a perfect evening for our anniversary."
+              </p>
+              <div class="flex items-center">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary-500 to-gold-500 flex items-center justify-center text-white font-bold mr-4">SJ</div>
+                <div>
+                  <h4 class="font-bold text-neutral-900 dark:text-white">Sarah Johnson</h4>
+                  <p class="text-neutral-500 dark:text-neutral-400 text-sm">CEO, Tech Innovations Ltd</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white dark:bg-neutral-800 rounded-2xl p-8 shadow-md border border-neutral-200 dark:border-neutral-700">
+              <div class="flex text-gold-400 mb-4">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-neutral-600 dark:text-neutral-300 italic mb-6">
+                "The Azure Restaurant exceeded all expectations. The chef created a personalized menu for my dietary needs, and the wine pairing was extraordinary. This is fine dining at its absolute best."
+              </p>
+              <div class="flex items-center">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary-500 to-gold-500 flex items-center justify-center text-white font-bold mr-4">MK</div>
+                <div>
+                  <h4 class="font-bold text-neutral-900 dark:text-white">Michael Kimani</h4>
+                  <p class="text-neutral-500 dark:text-neutral-400 text-sm">Culinary Critic</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white dark:bg-neutral-800 rounded-2xl p-8 shadow-md border border-neutral-200 dark:border-neutral-700">
+              <div class="flex text-gold-400 mb-4">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-neutral-600 dark:text-neutral-300 italic mb-6">
+                "As a frequent business traveler, I value efficiency and comfort. Chasetech delivers both with seamless check-in, a productive workspace, and the most comfortable bed I've ever slept in."
+              </p>
+              <div class="flex items-center">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary-500 to-gold-500 flex items-center justify-center text-white font-bold mr-4">AD</div>
+                <div>
+                  <h4 class="font-bold text-neutral-900 dark:text-white">Aisha Diallo</h4>
+                  <p class="text-neutral-500 dark:text-neutral-400 text-sm">Director, Global Ventures</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rooms Page -->
+    <section id="rooms" class="page">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="text-center mb-16 max-w-3xl mx-auto">
+          <h1 class="text-4xl md:text-5xl font-heading font-bold mb-4 text-neutral-900 dark:text-white">Rooms & Suites</h1>
+          <p class="text-lg text-neutral-600 dark:text-neutral-300">
+            Immerse yourself in meticulously designed accommodations that blend contemporary comfort with timeless elegance
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <!-- Deluxe Room -->
+          <article class="room-card bg-white dark:bg-neutral-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/600x400/0c4a6e/ffffff?text=Deluxe+Room" alt="Deluxe Room with king bed and city view" class="room-image w-full h-64 object-cover transition-transform duration-500">
+              <div class="absolute top-4 right-4 bg-gold-500 text-white px-3 py-1 rounded-full font-bold text-sm">Most Popular</div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-heading font-bold text-neutral-900 dark:text-white">Deluxe Room</h3>
+                <span class="text-gold-500 font-bold text-lg">$299<span class="text-base font-normal">/night</span></span>
+              </div>
+              <p class="text-neutral-600 dark:text-neutral-300 mb-4">
+                Spacious 40m² room featuring a king-sized bed, marble bathroom, and panoramic city views.
+              </p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start">
+                  <i class="fa-solid fa-check text-gold-500 mt-1 mr-2"></i>
+                  <span>King-sized luxury bed</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa-solid fa-check text-gold-500 mt-1 mr-2"></i>
+                  <span>Marble bathroom with rainfall shower</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa-solid fa-check text-gold-500 mt-1 mr-2"></i>
+                  <span>Smart TV and premium sound system</span>
+                </li>
+              </ul>
+              <a href="#contact" class="block w-full text-center bg-primary-500 hover:bg-primary-600 text-white font-medium py-3 rounded-lg transition-colors duration-300">
+                Book This Room
+              </a>
+            </div>
+          </article>
+          
+          <!-- Executive Suite -->
+          <article class="room-card bg-white dark:bg-neutral-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/600x400/0c4a6e/ffffff?text=Executive+Suite" alt="Executive Suite with separate living area and premium amenities" class="room-image w-full h-64 object-cover transition-transform duration-500">
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-heading font-bold text-neutral-900 dark:text-white">Executive Suite</h3>
+                <span class="text-gold-500 font-bold text-lg">$499<span class="text-base font-normal">/night</span></span>
+              </div>
+              <p class="text-neutral-600 dark:text-neutral-300 mb-4">
+                Expansive 70m² suite with separate living area, executive desk, and exclusive lounge access.
+              </p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start">
+                  <i class="fa-solid fa-check text-gold-500 mt-1 mr-2"></i>
+                  <span>Separate living and sleeping areas</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa-solid fa-check text-gold-500 mt-1 mr-2"></i>
+                  <span>Private balcony with city views</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa-solid fa-check text-gold-500 mt-1 mr-2"></i>
+                  <span>24/7 butler service</span>
+                </li>
+              </ul>
+              <a href="#contact" class="block w-full text-center bg-primary-500 hover:bg-primary-600 text-white font-medium py-3 rounded-lg transition-colors duration-300">
+                Book This Suite
+              </a>
+            </div>
+          </article>
+          
+          <!-- Presidential Suite -->
+          <article class="room-card bg-white dark:bg-neutral-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="relative overflow-hidden">
+              <img src="https://placehold.co/600x400/0c4a6e/ffffff?text=Presidential+Suite" alt="Presidential Suite with multiple bedrooms and luxury amenities" class="room-image w-full h-64 object-cover transition-transform duration-500">
+              <div class="absolute top-4 right-4 bg-primary-500 text-white px-3 py-1 rounded-full font-bold text-sm">Exclusive</div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-heading font-bold text-neutral-900 dark:text-white">Presidential Suite</h3>
+                <span class="text-gold-500 font-bold text-lg">$1,299<span class="text-base font-normal">/night</span></span>
+              </div>
+              <p class="text-neutral-600 dark:text-neutral-300 mb-4">
+                Ultimate luxury in our 150m² penthouse suite featuring multiple bedrooms, dining area, and panoramic views.
+              </p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start">
+                  <i class="fa-solid fa-check text-gold-500 mt-1 mr-2"></i>
+                  <span>Dedicated concierge service</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa-solid fa-check text-gold-500 mt-1 mr-2"></i>
+                  <span>Private in-suite spa treatment room</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa-solid fa-check text-gold-500 mt-1 mr-2"></i>
+                  <span>Expansive wrap-around terrace</span>
+                </li>
+              </ul>
+              <a href="#contact" class="block w-full text-center bg-primary-500 hover:bg-primary-600 text-white font-medium py-3 rounded-lg transition-colors duration-300">
+                Book This Suite
+              </a>
+            </div>
+          </article>
+        </div>
+        
+        <div class="text-center">
+          <a href="#contact" class="inline-block bg-gold-500 hover:bg-gold-600 text-neutral-900 font-bold py-4 px-8 rounded-full text-lg transition-colors duration-300 shadow-md hover:shadow-lg">
+            <span class="flex items-center justify-center">
+              <i class="fa-solid fa-calendar-check mr-2"></i> Book Your Stay
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Amenities Page -->
+    <section id="amenities" class="page">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="text-center mb-16 max-w-3xl mx-auto">
+          <h1 class="text-4xl md:text-5xl font-heading font-bold mb-4 text-neutral-900 dark:text-white">Exceptional Amenities</h1>
+          <p class="text-lg text-neutral-600 dark:text-neutral-300">
+            Indulge in our curated selection of premium facilities designed to enhance your stay experience
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Spa -->
+          <div class="amenity-card bg-white dark:bg-neutral-800 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+            <div class="relative h-56">
+              <img src="https://placehold.co/600x400/0c4a6e/ffffff?text=Luxury+Spa" alt="Luxury spa treatment room with serene ambiance" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/70 to-transparent"></div>
+              <div class="absolute bottom-4 left-4">
+                <div class="w-14 h-14 rounded-full bg-gold-500 flex items-center justify-center mb-3">
+                  <i class="fa-solid fa-spa text-2xl text-white amenity-icon"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white">Serenity Spa</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-neutral-600 dark:text-neutral-300 mb-4">
+                Rejuvenate with bespoke treatments using organic products in our tranquil wellness sanctuary.
+              </p>
+              <ul class="space-y-2 text-neutral-700 dark:text-neutral-300">
+                <li class="flex items-start">
+                  <i class="fa-solid fa-arrow-right text-gold-500 mt-1 mr-2"></i>
+                  <span>Signature massage therapies</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa-solid fa-arrow-right text-gold-500 mt-1 mr-2"></i>
+                  <span>Thermal suites and relaxation lounges</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa-solid fa-arrow-right text-gold-500 mt-1 mr-2"></i>
+                  <span>Expert wellness consultations</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Pool -->
+          <div class="amenity-card bg-white dark:bg-neutral-800 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+            <div class="relative h-56">
+              <img src="https://placehold.co/600x400/0c4a6e/ffffff?text=Infinity+Pool" alt="Infinity pool overlooking the city skyline" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/70 to-transparent"></div>
+              <div class="absolute bottom-4 left-4">
+                <div class="w-14 h-14 rounded-full bg-primary-500 flex items-center justify-center mb-3">
+                  <i class="fa-solid fa-water text-2xl text-white amenity-icon"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white">Infinity Pool</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-neutral-600 dark:text-neutral-300 mb-4">
+                Unwind at our temperature-controlled infinity pool with panoramic city views and poolside service.
+              </p>
+              <ul class="space-y-2 text-neutral-700 dark:text-neutral-300">
+                <li class="flex items-start">
+                  <i class="fa-solid fa-arrow-right text-gold-500 mt-1 mr-2"></i>
+                  <span>24/7 dedicated pool attendants</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa-solid fa-arrow-right text-gold-500 mt-1 mr-2"></i>
+                  <span>Private cabanas available</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa-solid fa-arrow-right text-gold-500 mt-1 mr-2"></i>
+                  <span>Complimentary refreshments</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Fitness Center -->
+          <div class="amenity-card bg-white dark:bg-neutral-800 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+            <div class="relative h-56">
+              <img src="https://placehold.co/600x400/0c4a6e/ffffff?text=Fitness+Center" alt="State-of-the-art fitness center with modern equipment" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/70 to-transparent"></div>
+              <div class="absolute bottom-4 left-4">
+                <div class="w-14 h-14 rounded-full bg-primary-500 flex items-center justify-center mb-3">
+                  <i class="fa-solid fa-dumbbell text-2xl text-white amenity-icon"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white">Fitness Center</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-neutral-600 dark:text-neutral-300 mb-4">
+                Maintain your wellness routine with our 24-hour fitness center featuring premium equipment and personal training.
+              </p>
+              <ul class="space-y-2 text-neutral-700 dark:text-neutral-300">
+                <li class="flex items-start">
+                  <i class="fa-solid fa-arrow-right text-gold-500 mt-1 mr-2"></i>
+                  <span>Technogym equipment with smart features</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa-solid fa-arrow-right text-gold-500 mt-1 mr-2"></i>
+                  <span>Virtual fitness classes</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa-solid fa-arrow-right text-gold-500 mt-1 mr-2"></i>
+                  <span>Personalized training sessions</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Business Center -->
+          <div class="amenity-card bg-white dark:bg-neutral-800 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+            <div class="relative h-56">
+              <img src="https://placehold.co/600x400/0c4a6e/ffffff?text=Business+Center" alt="Modern business center with conference facilities" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/70 to-transparent"></div>
+              <div class="absolute bottom-4 left-4">
+                <div class="w-14 h-14 rounded-full bg-primary-500 flex items-center justify-center mb-3">
+                  <i class="fa-solid fa-briefcase text-2xl text-white amenity-icon"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white">Business Center</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-neutral-600 dark:text-neutral-300 mb-4">
+                Stay productive with our fully-equipped business facilities and professional meeting spaces.
+              </p>
+              <ul class="space-y-2 text-neutral-700 dark:text-neutral-300">
+                <li class="flex items-start">
+                  <i class="fa-solid fa-arrow-right text-gold-500 mt-1 mr-2"></i>
+                  <span>VIP conference rooms with video conferencing</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa-solid fa-arrow-right text-gold-500 mt-1 mr-2"></i>
+                  <span>Dedicated business support team</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa-solid fa-arrow-right text-gold-500 mt-1 mr-2"></i>
+                  <span>Printing and secretarial services</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Concierge Service -->
+          <div class="amenity-card bg-white dark:bg-neutral-800 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+            <div class="relative h-56">
+              <img src="https://placehold.co/600x400/0c4a6e/ffffff?text=Concierge" alt="Professional concierge service desk" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/70 to-transparent"></div>
+              <div class="absolute bottom-4 left-4">
+                <div class="w-14 h-14 rounded-full bg-gold-500 flex items-center justify-center mb-3">
+                  <i class="fa-solid fa-concierge-bell text-2xl text-white amenity-icon"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white">Concierge Service</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-neutral-600 dark:text-neutral-300 mb-4">
+                Experience personalized attention with our award-winning concierge team available 24/7.
+              </p>
+              <ul class="space-y-2 text-neutral-700 dark:text-neutral-300">
+                <li class="flex items-start">
+                  <i class="fa-solid fa-arrow-right text-gold-500 mt-1 mr-2"></i>
+                  <span>Tailored city experiences and reservations</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa-solid fa-arrow-right text-gold-500 mt-1 mr-2"></i>
+                  <span>Exclusive access to events and venues</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa-solid fa-arrow-right text-gold-500 mt-1 mr-2"></i>
+                  <span>Luxury transportation arrangements</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Valet Service -->
+          <div class="amenity-card bg-white dark:bg-neutral-800 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+            <div class="relative h-56">
+              <img src="https://placehold.co/600x400/0c4a6e/ffffff?text=Valet+Parking" alt="Valet parking service at hotel entrance" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/70 to-transparent"></div>
+              <div class="absolute bottom-4 left-4">
+                <div class="w-14 h-14 rounded-full bg-primary-500 flex items-center justify-center mb-3">
+                  <i class="fa-solid fa-car text-2xl text-white amenity-icon"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white">Valet Service</h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-neutral-600 dark:text-neutral-300 mb-4">
+                Enjoy seamless arrivals and departures with our complimentary luxury valet parking service.
+              </p>
+              <ul class="space-y-2 text-neutral-700 dark:text-neutral-300">
+                <li class="flex items-start">
+                  <i class="fa-solid fa-arrow-right text-gold-500 mt-1 mr-2"></i>
+                  <span>24/7 professional attendants</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa-solid fa-arrow-right text-gold-500 mt-1 mr-2"></i>
+                  <span>Vehicle care and maintenance</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa-solid fa-arrow-right text-gold-500 mt-1 mr-2"></i>
+                  <span>Electric vehicle charging stations</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dining Page -->
+    <section id="dining" class="page">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="text-center mb-16 max-w-3xl mx-auto">
+          <h1 class="text-4xl md:text-5xl font-heading font-bold mb-4 text-neutral-900 dark:text-white">Exquisite Dining</h1>
+          <p class="text-lg text-neutral-600 dark:text-neutral-300">
+            Savor culinary excellence crafted by our award-winning chefs using locally-sourced premium ingredients
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+          <div class="relative">
+            <img src="https://placehold.co/800x600/0c4a6e/ffffff?text=Fine+Dining+Restaurant" alt="Elegant restaurant interior with candlelit tables" class="rounded-2xl shadow-xl w-full h-auto object-cover" loading="lazy">
+            <div class="absolute -bottom-4 -right-4 bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-lg border-2 border-gold-400 max-w-xs">
+              <div class="flex items-center mb-2">
+                <i class="fa-solid fa-star text-gold-500 mr-1"></i>
+                <i class="fa-solid fa-star text-gold-500 mr-1"></i>
+                <i class="fa-solid fa-star text-gold-500 mr-1"></i>
+                <i class="fa-solid fa-star text-gold-500 mr-1"></i>
+                <i class="fa-solid fa-star text-gold-500"></i>
+              </div>
+              <p class="font-bold text-neutral-900 dark:text-white">"An unforgettable culinary experience"</p>
+              <p class="text-neutral-600 dark:text-neutral-300 text-sm">— Food & Wine Magazine</p>
+            </div>
+          </div>
+          
+          <div>
+            <h2 class="text-2xl font-heading font-bold mb-4 text-neutral-900 dark:text-white">Azure Restaurant</h2>
+            <p class="text-neutral-600 dark:text-neutral-300 mb-6 text-lg leading-relaxed">
+              Our signature restaurant offers contemporary cuisine in an elegant setting with floor-to-ceiling windows showcasing breathtaking city views. Our seasonal menu highlights the finest local ingredients prepared with innovative techniques.
+            </p>
+            
+            <div class="space-y-4 mb-8">
+              <div class="flex items-start">
+                <i class="fa-solid fa-utensils text-gold-500 mt-1 mr-3 text-xl"></i>
+                <div>
+                  <h3 class="font-bold text-lg mb-1">Breakfast</h3>
+                  <p class="text-neutral-600 dark:text-neutral-300">7:00 AM - 11:00 AM • Buffet & À la carte</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <i class="fa-solid fa-wine-glass text-gold-500 mt-1 mr-3 text-xl"></i>
+                <div>
+                  <h3 class="font-bold text-lg mb-1">Lunch</h3>
+                  <p class="text-neutral-600 dark:text-neutral-300">12:00 PM - 3:00 PM • Business lunch menu available</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <i class="fa-solid fa-moon text-gold-500 mt-1 mr-3 text-xl"></i>
+                <div>
+                  <h3 class="font-bold text-lg mb-1">Dinner</h3>
+                  <p class="text-neutral-600 dark:text-neutral-300">6:00 PM - 11:00 PM • Chef's tasting menu recommended</p>
+                </div>
+              </div>
+            </div>
+            
+            <a href="#contact" class="inline-flex items-center bg-gold-500 hover:bg-gold-600 text-neutral-900 font-bold py-3 px-6 rounded-full transition-colors duration-300">
+              Reserve a Table
+              <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto text-center mb-20">
+          <h2 class="text-3xl font-heading font-bold mb-8 text-neutral-900 dark:text-white">Dining Experiences</h2>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="p-4">
+              <i class="fa-solid fa-wine-bottle text-4xl text-primary-500 mb-3"></i>
+              <h3 class="font-bold text-lg mb-1">Wine Cellar</h3>
+              <p class="text-neutral-600 dark:text-neutral-300">500+ curated selections</p>
+            </div>
+            <div class="p-4">
+              <i class="fa-solid fa-martini-glass-citrus text-4xl text-primary-500 mb-3"></i>
+              <h3 class="font-bold text-lg mb-1">Cocktail Lounge</h3>
+              <p class="text-neutral-600 dark:text-neutral-300">Artisanal mixology</p>
+            </div>
+            <div class="p-4">
+              <i class="fa-solid fa-leaf text-4xl text-primary-500 mb-3"></i>
+              <h3 class="font-bold text-lg mb-1">Organic Garden</h3>
+              <p class="text-neutral-600 dark:text-neutral-300">Farm-to-table ingredients</p>
+            </div>
+            <div class="p-4">
+              <i class="fa-solid fa-cake-candles text-4xl text-primary-500 mb-3"></i>
+              <h3 class="font-bold text-lg mb-1">Private Events</h3>
+              <p class="text-neutral-600 dark:text-neutral-300">Custom menus available</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-br from-neutral-800 to-neutral-900 rounded-3xl p-12 text-center text-white">
+          <div class="max-w-3xl mx-auto">
+            <i class="fa-solid fa-utensils text-5xl text-gold-400 mb-6"></i>
+            <h2 class="text-3xl font-heading font-bold mb-4">Private Dining Experiences</h2>
+            <p class="text-xl mb-8 opacity-90">
+              Celebrate special occasions in our exclusive private dining rooms or arrange a personalized culinary journey in the comfort of your suite.
+            </p>
+            <a href="#contact" class="inline-block bg-gold-500 hover:bg-gold-600 text-neutral-900 font-bold py-4 px-8 rounded-full text-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
+              <span class="flex items-center justify-center">
+                <i class="fa-solid fa-envelope mr-2"></i> Inquire About Events
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Page -->
+    <section id="gallery" class="page">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="text-center mb-16 max-w-3xl mx-auto">
+          <h1 class="text-4xl md:text-5xl font-heading font-bold mb-4 text-neutral-900 dark:text-white">Our Gallery</h1>
+          <p class="text-lg text-neutral-600 dark:text-neutral-300">
+            A glimpse into the elegant spaces and memorable experiences that await you at Chasetech
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-16">
+          <div class="gallery-item rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+            <img src="https://placehold.co/600x400/0c4a6e/ffffff?text=Grand+Lobby" alt="Grand hotel lobby with crystal chandeliers and marble floors" class="w-full h-48 object-cover">
+          </div>
+          <div class="gallery-item rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+            <img src="https://placehold.co/600x400/0c4a6e/ffffff?text=Presidential+Suite" alt="Luxurious presidential suite with panoramic city views" class="w-full h-48 object-cover">
+          </div>
+          <div class="gallery-item rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+            <img src="https://placehold.co/600x400/0c4a6e/ffffff?text=Spa+Treatment" alt="Serene spa treatment room with candles and relaxation area" class="w-full h-48 object-cover">
+          </div>
+          <div class="gallery-item rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+            <img src="https://placehold.co/600x400/0c4a6e/ffffff?text=Infinity+Pool" alt="Infinity pool overlooking the city skyline at sunset" class="w-full h-48 object-cover">
+          </div>
+          <div class="gallery-item rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+            <img src="https://placehold.co/600x400/0c4a6e/ffffff?text=Azure+Restaurant" alt="Elegant dining room with candlelit tables and city views" class="w-full h-48 object-cover">
+          </div>
+          <div class="gallery-item rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+            <img src="https://placehold.co/600x400/0c4a6e/ffffff?text=Fitness+Center" alt="State-of-the-art fitness center with modern equipment" class="w-full h-48 object-cover">
+          </div>
+          <div class="gallery-item rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+            <img src="https://placehold.co/600x400/0c4a6e/ffffff?text=Business+Center" alt="Modern business center with conference facilities" class="w-full h-48 object-cover">
+          </div>
+          <div class="gallery-item rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+            <img src="https://placehold.co/600x400/0c4a6e/ffffff?text=Concierge" alt="Professional concierge service desk" class="w-full h-48 object-cover">
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div class="rounded-2xl overflow-hidden shadow-xl">
+            <img src="https://placehold.co/1200x600/0c4a6e/ffffff?text=Hotel+Exterior" alt="Elegant hotel exterior with grand entrance at night" class="w-full h-auto object-cover">
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-xl">
+            <img src="https://placehold.co/1200x600/0c4a6e/ffffff?text=Wine+Cellar" alt="Exclusive wine cellar with curated selection" class="w-full h-auto object-cover">
+          </div>
+        </div>
+        
+        <div class="text-center max-w-3xl mx-auto">
+          <h2 class="text-3xl font-heading font-bold mb-4 text-neutral-900 dark:text-white">Events & Celebrations</h2>
+          <p class="text-lg text-neutral-600 dark:text-neutral-300 mb-8">
+            From intimate gatherings to grand celebrations, our dedicated events team creates unforgettable moments in our versatile function spaces.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div class="p-6 bg-white dark:bg-neutral-800 rounded-xl shadow-md border border-neutral-200 dark:border-neutral-700">
+              <i class="fa-solid fa-ring text-4xl text-gold-500 mb-4"></i>
+              <h3 class="text-xl font-bold mb-2">Weddings</h3>
+              <p class="text-neutral-600 dark:text-neutral-300">Bespoke wedding experiences with panoramic views</p>
+            </div>
+            <div class="p-6 bg-white dark:bg-neutral-800 rounded-xl shadow-md border border-neutral-200 dark:border-neutral-700">
+              <i class="fa-solid fa-briefcase text-4xl text-gold-500 mb-4"></i>
+              <h3 class="text-xl font-bold mb-2">Corporate Events</h3>
+              <p class="text-neutral-600 dark:text-neutral-300">Seamless business gatherings with state-of-the-art technology</p>
+            </div>
+            <div class="p-6 bg-white dark:bg-neutral-800 rounded-xl shadow-md border border-neutral-200 dark:border-neutral-700">
+              <i class="fa-solid fa-champagne-glasses text-4xl text-gold-500 mb-4"></i>
+              <h3 class="text-xl font-bold mb-2">Social Celebrations</h3>
+              <p class="text-neutral-600 dark:text-neutral-300">Personalized celebrations for life's special moments</p>
+            </div>
+          </div>
+          
+          <div class="mt-12">
+            <a href="#contact" class="inline-block bg-primary-500 hover:bg-primary-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-colors duration-300 shadow-md hover:shadow-lg">
+              <span class="flex items-center justify-center">
+                <i class="fa-solid fa-camera mr-2"></i> Request Event Information
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Page -->
+    <section id="contact" class="page">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="text-center mb-16 max-w-3xl mx-auto">
+          <h1 class="text-4xl md:text-5xl font-heading font-bold mb-4 text-neutral-900 dark:text-white">Location & Contact</h1>
+          <p class="text-lg text-neutral-600 dark:text-neutral-300">
+            Find us in the heart of the city or reach out to our dedicated team for inquiries and reservations
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+          <!-- Map Placeholder -->
+          <div class="bg-neutral-200 dark:bg-neutral-800 rounded-2xl overflow-hidden shadow-lg h-96 flex items-center justify-center">
+            <div class="text-center p-8">
+              <i class="fa-solid fa-location-dot text-6xl text-primary-500 mb-4"></i>
+              <h2 class="text-2xl font-bold mb-2 text-neutral-900 dark:text-white">Prime City Location</h2>
+              <p class="text-neutral-600 dark:text-neutral-300 mb-4">
+                123 Elegance Boulevard, Nairobi, Kenya
+              </p>
+              <p class="text-neutral-600 dark:text-neutral-300">
+                Nestled in the prestigious central district with easy access to business centers, cultural attractions, and entertainment venues.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Contact Information -->
+          <div>
+            <div class="bg-neutral-50 dark:bg-neutral-900 rounded-2xl p-8 shadow-lg mb-8">
+              <h2 class="text-2xl font-heading font-bold mb-6 text-neutral-900 dark:text-white">Contact Details</h2>
+              
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div class="w-12 h-12 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center flex-shrink-0">
+                    <i class="fa-solid fa-phone text-primary-600 dark:text-primary-400 text-xl"></i>
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="font-bold mb-1">Phone</h3>
+                    <a href="tel:+254790124604" class="text-neutral-700 dark:text-neutral-300 hover:text-primary-500 transition-colors block">+254 790 124 604</a>
+                    <span class="text-neutral-500 dark:text-neutral-400 text-sm">24/7 Reception</span>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="w-12 h-12 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center flex-shrink-0">
+                    <i class="fa-solid fa-envelope text-primary-600 dark:text-primary-400 text-xl"></i>
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="font-bold mb-1">Email</h3>
+                    <a href="mailto:reservations@chasetech.com" class="text-neutral-700 dark:text-neutral-300 hover:text-primary-500 transition-colors block">reservations@chasetech.com</a>
+                    <a href="mailto:info@chasetech.com" class="text-neutral-700 dark:text-neutral-300 hover:text-primary-500 transition-colors block">info@chasetech.com</a>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="w-12 h-12 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center flex-shrink-0">
+                    <i class="fa-solid fa-clock text-primary-600 dark:text-primary-400 text-xl"></i>
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="font-bold mb-1">Opening Hours</h3>
+                    <p class="text-neutral-700 dark:text-neutral-300">
+                      Reception: 24/7 • Restaurant: 7AM-11PM • Spa: 9AM-9PM
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="w-12 h-12 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center flex-shrink-0">
+                    <i class="fa-brands fa-whatsapp text-primary-600 dark:text-primary-400 text-xl"></i>
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="font-bold mb-1">WhatsApp</h3>
+                    <a href="https://wa.me/254790124604" class="text-neutral-700 dark:text-neutral-300 hover:text-primary-500 transition-colors block">+254 790 124 604</a>
+                    <span class="text-neutral-500 dark:text-neutral-400 text-sm">Chat with our concierge</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Social Media Links -->
+            <div class="text-center p-6 bg-gradient-to-br from-primary-50 to-neutral-50 dark:from-neutral-900 dark:to-neutral-800 rounded-2xl border border-neutral-200 dark:border-neutral-700">
+              <h3 class="text-xl font-bold mb-4 text-neutral-900 dark:text-white">Connect With Us</h3>
+              <p class="text-neutral-600 dark:text-neutral-300 mb-6">
+                Follow us on social media for exclusive offers, events, and behind-the-scenes glimpses
+              </p>
+              <div class="flex justify-center space-x-6">
+                <a href="#" class="text-neutral-700 dark:text-neutral-300 hover:text-primary-500 transition-colors text-2xl" aria-label="Facebook">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#" class="text-neutral-700 dark:text-neutral-300 hover:text-primary-500 transition-colors text-2xl" aria-label="Instagram">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="text-neutral-700 dark:text-neutral-300 hover:text-primary-500 transition-colors text-2xl" aria-label="Twitter">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="#" class="text-neutral-700 dark:text-neutral-300 hover:text-primary-500 transition-colors text-2xl" aria-label="LinkedIn">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="text-neutral-700 dark:text-neutral-300 hover:text-primary-500 transition-colors text-2xl" aria-label="YouTube">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Booking Form -->
+        <div class="max-w-4xl mx-auto bg-gradient-to-br from-primary-50 to-neutral-50 dark:from-neutral-900 dark:to-neutral-800 rounded-3xl p-8 md:p-12 shadow-xl border border-neutral-200 dark:border-neutral-700">
+          <div class="text-center mb-8">
+            <h2 class="text-3xl font-heading font-bold mb-2 text-neutral-900 dark:text-white">Booking Inquiry</h2>
+            <p class="text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
+              Fill out the form below and our reservations team will contact you within 24 hours to confirm availability and details.
+            </p>
+          </div>
+          
+          <form id="booking-form" class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-sm font-medium mb-1 text-neutral-700 dark:text-neutral-300">Full Name</label>
+                <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-neutral-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors" aria-required="true">
+                <p class="mt-1 text-xs text-neutral-500 dark:text-neutral-400">As it appears on your ID</p>
+              </div>
+              
+              <div>
+                <label for="email" class="block text-sm font-medium mb-1 text-neutral-700 dark:text-neutral-300">Email Address</label>
+                <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-neutral-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors" aria-required="true">
+              </div>
+              
+              <div>
+                <label for="phone" class="block text-sm font-medium mb-1 text-neutral-700 dark:text-neutral-300">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 rounded-lg border border-neutral-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors" aria-required="true" placeholder="+254...">
+              </div>
+              
+              <div>
+                <label for="guests" class="block text-sm font-medium mb-1 text-neutral-700 dark:text-neutral-300">Number of Guests</label>
+                <select id="guests" name="guests" required class="w-full px-4 py-3 rounded-lg border border-neutral-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors" aria-required="true">
+                  <option value="">Select number</option>
+                  <option value="1">1 Guest</option>
+                  <option value="2">2 Guests</option>
+                  <option value="3">3 Guests</option>
+                  <option value="4">4 Guests</option>
+                  <option value="5+">5+ Guests</option>
+                </select>
+              </div>
+              
+              <div>
+                <label for="checkin" class="block text-sm font-medium mb-1 text-neutral-700 dark:text-neutral-300">Check-in Date</label>
+                <input type="date" id="checkin" name="checkin" required class="w-full px-4 py-3 rounded-lg border border-neutral-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors" aria-required="true">
+              </div>
+              
+              <div>
+                <label for="checkout" class="block text-sm font-medium mb-1 text-neutral-700 dark:text-neutral-300">Check-out Date</label>
+                <input type="date" id="checkout" name="checkout" required class="w-full px-4 py-3 rounded-lg border border-neutral-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors" aria-required="true">
+              </div>
+            </div>
+            
+            <div>
+              <label for="room-type" class="block text-sm font-medium mb-1 text-neutral-700 dark:text-neutral-300">Room Type</label>
+              <select id="room-type" name="room-type" required class="w-full px-4 py-3 rounded-lg border border-neutral-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors" aria-required="true">
+                <option value="">Select a room type</option>
+                <option value="deluxe">Deluxe Room</option>
+                <option value="executive">Executive Suite</option>
+                <option value="presidential">Presidential Suite</option>
+              </select>
+            </div>
+            
+            <div>
+              <label for="message" class="block text-sm font-medium mb-1 text-neutral-700 dark:text-neutral-300">Special Requests</label>
+              <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-neutral-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors" placeholder="Dietary requirements, anniversary celebrations, airport transfers, etc."></textarea>
+              <p class="mt-1 text-xs text-neutral-500 dark:text-neutral-400">Let us know how we can make your stay exceptional</p>
+            </div>
+            
+            <div class="flex items-start">
+              <input type="checkbox" id="privacy" name="privacy" required class="mt-1 h-4 w-4 text-primary-600 rounded focus:ring-primary-500 border-neutral-300 dark:border-neutral-600" aria-required="true">
+              <label for="privacy" class="ml-2 block text-sm text-neutral-700 dark:text-neutral-300">
+                I agree to the <a href="#" class="text-primary-500 hover:underline">privacy policy</a> and <a href="#" class="text-primary-500 hover:underline">terms of service</a>
+              </label>
+            </div>
+            
+            <button type="submit" class="w-full bg-gold-500 hover:bg-gold-600 text-neutral-900 font-bold py-4 px-6 rounded-lg text-lg transition-colors duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-gold-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed">
+              <span class="flex items-center justify-center">
+                <i class="fa-solid fa-calendar-check mr-2"></i> Check Availability
+              </span>
+            </button>
+          </form>
+          
+          <div id="form-message" class="mt-6 hidden p-4 rounded-lg text-center text-sm font-medium" aria-live="polite"></div>
+          
+          <div class="mt-8 pt-8 border-t border-neutral-200 dark:border-neutral-700 text-center text-neutral-600 dark:text-neutral-300">
+            <p>Prefer to book by phone? Call us directly at <a href="tel:+254790124604" class="text-primary-500 hover:underline font-medium">+254 790 124 604</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-neutral-900 text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="space-y-6">
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-gold-500 rounded-full flex items-center justify-center">
+              <span class="text-white font-bold text-lg">C</span>
+            </div>
+            <span class="text-xl font-heading font-bold">Chasetech</span>
+          </div>
+          <p class="text-neutral-300">
+            Experience unparalleled luxury and exceptional service in the heart of the city. Where every moment is crafted to perfection.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-neutral-400 hover:text-white transition-colors" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f text-xl"></i>
+            </a>
+            <a href="#" class="text-neutral-400 hover:text-white transition-colors" aria-label="Instagram">
+              <i class="fa-brands fa-instagram text-xl"></i>
+            </a>
+            <a href="#" class="text-neutral-400 hover:text-white transition-colors" aria-label="Twitter">
+              <i class="fa-brands fa-twitter text-xl"></i>
+            </a>
+            <a href="#" class="text-neutral-400 hover:text-white transition-colors" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in text-xl"></i>
+            </a>
+            <a href="#" class="text-neutral-400 hover:text-white transition-colors" aria-label="YouTube">
+              <i class="fa-brands fa-youtube text-xl"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-bold mb-4 text-white">Quick Links</h3>
+          <ul class="space-y-3">
+            <li><a href="#home" class="text-neutral-300 hover:text-white transition-colors flex items-start"> <i class="fa-solid fa-chevron-right mt-1 mr-2 text-gold-500"></i> Home</a></li>
+            <li><a href="#rooms" class="text-neutral-300 hover:text-white transition-colors flex items-start"> <i class="fa-solid fa-chevron-right mt-1 mr-2 text-gold-500"></i> Rooms & Suites</a></li>
+            <li><a href="#amenities" class="text-neutral-300 hover:text-white transition-colors flex items-start"> <i class="fa-solid fa-chevron-right mt-1 mr-2 text-gold-500"></i> Amenities</a></li>
+            <li><a href="#dining" class="text-neutral-300 hover:text-white transition-colors flex items-start"> <i class="fa-solid fa-chevron-right mt-1 mr-2 text-gold-500"></i> Dining</a></li>
+            <li><a href="#gallery" class="text-neutral-300 hover:text-white transition-colors flex items-start"> <i class="fa-solid fa-chevron-right mt-1 mr-2 text-gold-500"></i> Gallery</a></li>
+            <li><a href="#contact" class="text-neutral-300 hover:text-white transition-colors flex items-start"> <i class="fa-solid fa-chevron-right mt-1 mr-2 text-gold-500"></i> Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-bold mb-4 text-white">Contact Info</h3>
+          <ul class="space-y-3 text-neutral-300">
+            <li class="flex">
+              <i class="fa-solid fa-location-dot mt-1 mr-3 text-gold-500"></i>
+              <span>123 Elegance Boulevard, Nairobi, Kenya</span>
+            </li>
+            <li class="flex">
+              <i class="fa-solid fa-phone mt-1 mr-3 text-gold-500"></i>
+              <a href="tel:+254790124604" class="hover:text-white transition-colors">+254 790 124 604</a>
+            </li>
+            <li class="flex">
+              <i class="fa-solid fa-envelope mt-1 mr-3 text-gold-500"></i>
+              <a href="mailto:reservations@chasetech.com" class="hover:text-white transition-colors">reservations@chasetech.com</a>
+            </li>
+            <li class="flex">
+              <i class="fa-solid fa-clock mt-1 mr-3 text-gold-500"></i>
+              <span>Reception: 24/7, Restaurant: 7AM-11PM</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-bold mb-4 text-white">Newsletter</h3>
+          <p class="text-neutral-300 mb-4">
+            Subscribe to receive exclusive offers, updates, and travel inspiration.
+          </p>
+          <form class="space-y-3">
+            <div>
+              <label for="newsletter-email" class="sr-only">Email address</label>
+              <input type="email" id="newsletter-email" placeholder="Your email address" class="w-full px-4 py-3 rounded-lg bg-neutral-800 border border-neutral-700 text-white placeholder-neutral-400 focus:ring-2 focus:ring-gold-500 focus:border-transparent" required>
+            </div>
+            <button type="submit" class="w-full bg-gold-500 hover:bg-gold-600 text-neutral-900 font-medium py-3 rounded-lg transition-colors duration-300">
+              Subscribe
+            </button>
+          </form>
+          <p class="text-xs text-neutral-500 mt-2">
+            We respect your privacy. Unsubscribe at any time.
+          </p>
+        </div>
+      </div>
+      
+      <div class="border-t border-neutral-800 mt-12 pt-8 text-center text-neutral-400 text-sm">
+        <p>&copy; 2024 Chasetech Luxury Hotel. All rights reserved.</p>
+        <p class="mt-2">
+          <a href="#" class="hover:text-white transition-colors mx-2">Privacy Policy</a> • 
+          <a href="#" class="hover:text-white transition-colors mx-2">Terms of Service</a> • 
+          <a href="#" class="hover:text-white transition-colors mx-2">Accessibility Statement</a> •
+          <a href="#" class="hover:text-white transition-colors mx-2">Sitemap</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script>
+    // Initialize theme toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const themeToggle = document.getElementById('theme-toggle');
+      const htmlElement = document.documentElement;
+      
+      // Check for saved theme preference or respect OS preference
+      const savedTheme = localStorage.getItem('hotel-theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      
+      if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        htmlElement.classList.add('dark');
+        updateThemeIcon(true);
+      } else {
+        htmlElement.classList.remove('dark');
+        updateThemeIcon(false);
+      }
+      
+      themeToggle.addEventListener('click', () => {
+        htmlElement.classList.toggle('dark');
+        const isDark = htmlElement.classList.contains('dark');
+        localStorage.setItem('hotel-theme', isDark ? 'dark' : 'light');
+        updateThemeIcon(isDark);
+      });
+      
+      function updateThemeIcon(isDark) {
+        const icon = themeToggle.querySelector('i');
+        if (isDark) {
+          icon.classList.replace('fa-moon', 'fa-sun');
+          icon.classList.add('text-yellow-300');
+          icon.classList.remove('text-neutral-700', 'dark:text-neutral-300');
+        } else {
+          icon.classList.replace('fa-sun', 'fa-moon');
+          icon.classList.remove('text-yellow-300');
+          icon.classList.add('text-neutral-700', 'dark:text-neutral-300');
+        }
+      }
+      
+      // Mobile Menu Toggle
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      mobileMenuButton.addEventListener('click', () => {
+        const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('hidden');
+        
+        // Update button icon
+        const icon = mobileMenuButton.querySelector('i');
+        if (!isExpanded) {
+          icon.classList.replace('fa-bars', 'fa-times');
+        } else {
+          icon.classList.replace('fa-times', 'fa-bars');
+        }
+      });
+      
+      // Close mobile menu when clicking a link
+      document.querySelectorAll('#mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          mobileMenuButton.setAttribute('aria-expanded', 'false');
+          mobileMenuButton.querySelector('i').classList.replace('fa-times', 'fa-bars');
+        });
+      });
+      
+      // Page Navigation
+      const pages = document.querySelectorAll('.page');
+      const navLinks = document.querySelectorAll('nav a, #mobile-menu a');
+      
+      // Handle navigation clicks
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          if (!targetId || targetId === '#') return;
+          
+          // Show target page and hide others
+          pages.forEach(page => {
+            page.classList.remove('active');
+          });
+          
+          const targetPage = document.querySelector(targetId);
+          if (targetPage) {
+            targetPage.classList.add('active');
+            
+            // Update URL hash
+            window.history.pushState({}, '', targetId);
+            
+            // Scroll to top
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          }
+          
+          // Close mobile menu if open
+          if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+            mobileMenuButton.setAttribute('aria-expanded', 'false');
+            mobileMenuButton.querySelector('i').classList.replace('fa-times', 'fa-bars');
+          }
+        });
+      });
+      
+      // Handle browser back/forward buttons
+      window.addEventListener('popstate', function(event) {
+        const hash = window.location.hash || '#home';
+        
+        // Show target page and hide others
+        pages.forEach(page => {
+          page.classList.remove('active');
+        });
+        
+        const targetPage = document.querySelector(hash);
+        if (targetPage) {
+          targetPage.classList.add('active');
+        }
+        
+        // Scroll to top
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+      
+      // Handle initial page load based on URL hash
+      const initialHash = window.location.hash || '#home';
+      pages.forEach(page => {
+        page.classList.remove('active');
+      });
+      
+      const initialPage = document.querySelector(initialHash);
+      if (initialPage) {
+        initialPage.classList.add('active');
+      }
+      
+      // Set today's date as minimum for date inputs
+      const today = new Date().toISOString().split('T')[0];
+      document.querySelectorAll('input[type="date"]').forEach(input => {
+        input.min = today;
+      });
+      
+      // Booking Form Validation & Submission
+      const bookingForm = document.getElementById('booking-form');
+      const formMessage = document.getElementById('form-message');
+      
+      if (bookingForm) {
+        bookingForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Simple validation
+          const name = document.getElementById('name').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const privacy = document.getElementById('privacy').checked;
+          
+          if (!name || !email || !privacy) {
+            showFormMessage('Please fill in all required fields and accept the privacy policy.', 'error');
+            return;
+          }
+          
+          if (!isValidEmail(email)) {
+            showFormMessage('Please enter a valid email address.', 'error');
+            return;
+          }
+          
+          // Simulate form submission
+          bookingForm.querySelector('button[type="submit"]').disabled = true;
+          
+          // Show success message after delay
+          setTimeout(() => {
+            showFormMessage('Thank you for your inquiry! We will contact you shortly to confirm availability.', 'success');
+            bookingForm.reset();
+            bookingForm.querySelector('button[type="submit"]').disabled = false;
+          }, 1500);
+        });
+      }
+      
+      function isValidEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+      }
+      
+      function showFormMessage(message, type) {
+        formMessage.textContent = message;
+        formMessage.classList.remove('hidden');
+        
+        if (type === 'success') {
+          formMessage.classList.remove('bg-red-100', 'text-red-700', 'dark:bg-red-900/30', 'dark:text-red-300');
+          formMessage.classList.add('bg-green-100', 'text-green-700', 'dark:bg-green-900/30', 'dark:text-green-300');
+        } else {
+          formMessage.classList.remove('bg-green-100', 'text-green-700', 'dark:bg-green-900/30', 'dark:text-green-300');
+          formMessage.classList.add('bg-red-100', 'text-red-700', 'dark:bg-red-900/30', 'dark:text-red-300');
+        }
+        
+        // Auto-hide after 5 seconds
+        setTimeout(() => {
+          formMessage.classList.add('hidden');
+        }, 5000);
+      }
+    });
+  </script>
+</body>
+</html>
+
